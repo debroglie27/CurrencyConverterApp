@@ -48,14 +48,24 @@ class CurrencyConverterApp:
         # Requesting for Information
         api_countries_request = requests.get("https://free.currconv.com/api/v7/countries?apiKey=" + self.API_KEY)
         # Getting the Information
-        api = json.loads(api_countries_request.content)
+        api_info = json.loads(api_countries_request.content)
 
         # Storing only the Required Information
         self.country_currency_dict = {}
         self.country_list = []
-        for country_id in api['results']:
-            self.country_currency_dict[api['results'][country_id]['name'].lower()] = api['results'][country_id]['currencyId'], api['results'][country_id]['currencyName'], api['results'][country_id]['currencySymbol']
-            self.country_list.append(api['results'][country_id]['name'])
+        for country_id in api_info['results']:
+            # Getting currency information for a particular country_id
+            currency_id = api_info['results'][country_id]['currencyId']
+            currency_name = api_info['results'][country_id]['currencyName']
+            currency_symbol = api_info['results'][country_id]['currencySymbol']
+
+            # Storing the currency info and country name in dict and list respectively
+            country_name_lowercase = api_info['results'][country_id]['name'].lower()
+            self.country_currency_dict[country_name_lowercase] = currency_id, currency_name, currency_symbol
+            self.country_list.append(api_info['results'][country_id]['name'])
+
+        # Sorting the country_list for aesthetics
+        self.country_list = sorted(self.country_list)
 
         if gui:
             self.root = master
@@ -119,8 +129,7 @@ class CurrencyConverterApp:
             return -1
         elif country1_name == country2_name:
             return -2
-        elif country1_name not in [x.lower() for x in self.country_list] or \
-                country2_name not in [x.lower() for x in self.country_list]:
+        elif country1_name not in [x.lower() for x in self.country_list] or country2_name not in [x.lower() for x in self.country_list]:
             return -3
         else:
             # Making our search option
@@ -242,8 +251,7 @@ class WinConversionRate:
             messagebox.showwarning("Warning", "Please Select a Country Name", parent=root)
         elif country1_name == country2_name:
             messagebox.showwarning("Warning", "Please Select Different Country Names", parent=root)
-        elif country1_name not in [x.lower() for x in self.country_list] or \
-                country2_name not in [x.lower() for x in self.country_list]:
+        elif country1_name not in [x.lower() for x in self.country_list] or country2_name not in [x.lower() for x in self.country_list]:
             messagebox.showwarning("Warning", "Please Select Proper Country Names", parent=root)
         else:
             search_option = self.country_currency_dict[country1_name][0] + '_' + self.country_currency_dict[country2_name][0]
