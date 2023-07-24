@@ -220,8 +220,8 @@ class WinConversionRate:
         self.my_frame.grid(row=0, column=1, rowspan=2, pady=(30, 0), padx=(30, 25))
 
         # Create Listbox
-        self.my_list = Listbox(self.my_frame, font=("Helvetica", 10), width=24, height=15, bg="#f9ff85",
-                               fg="black", selectbackground="green", activestyle="none")
+        self.my_list = Listbox(self.my_frame, font=("Helvetica", 10), width=24, height=15, bg="#fcfcf0",
+                               fg="black", selectbackground="#02b517", activestyle="none")
         self.my_list.pack(side=LEFT, fill=BOTH, pady=(10, 11), padx=(10, 0))
 
         # Create Scrollbar
