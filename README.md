@@ -6,7 +6,7 @@ We can convert any currency type to any other currency type using this APP.
 ### Basic View:
 The App looks like this:
 
-![Basic View](https://raw.githubusercontent.com/debroglie27/tensorEnv/main/Tkinter_prac/Projects/Currency_Converter_App/Images/Basic_View.png)
+![Basic View](https://github.com/debroglie27/CurrencyConverterApp/blob/b8568d83cb3f40e472f6acccf3f6037130e5ad5b/Images/Basic_View.png)
 
 Here we can provide the name of the *Base Country* whose currency we would like to convert.  
 Next we can provide the name of the *Conversion Country* whose currency we want to convert to.
