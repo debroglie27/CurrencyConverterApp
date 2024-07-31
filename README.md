@@ -18,7 +18,7 @@ between those countries.
 ### Example:
 This is how to use the App.
 
-![Conversion Rate](https://raw.githubusercontent.com/debroglie27/tensorEnv/main/Tkinter_prac/Projects/Currency_Converter_App/Images/Conversion_Rate.png)
+![Conversion Rate](https://github.com/debroglie27/CurrencyConverterApp/blob/cb17aeb2d95bb610db85938ef20efca29c4df158/Images/Conversion_Rate.png)
 
 Here the *Unlock Button* is used because after clicking on the   
 *Conversion Rate Button* every Entry Box becomes *readonly*.   
