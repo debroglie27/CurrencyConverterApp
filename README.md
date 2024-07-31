@@ -30,7 +30,7 @@ This is how the Convert Window looks.
 > Note: We cannot go to the *Convert Window* without specifying the *Base Country*  
 and *Conversion Country*.
 
-![Convert](https://raw.githubusercontent.com/debroglie27/tensorEnv/main/Tkinter_prac/Projects/Currency_Converter_App/Images/Convert.png)
+![Convert](https://github.com/debroglie27/CurrencyConverterApp/blob/f302373fa174cdc80a7d28eb959d5807f3f54145/Images/Convert.png)
 
 As shown above we can provide the currency amount for the *Base Country*  
 and clicking on the *Convert Button* converts that amount to its equivalent  
